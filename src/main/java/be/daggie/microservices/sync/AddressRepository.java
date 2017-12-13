@@ -29,7 +29,7 @@ public class AddressRepository {
 		ObjectMapper mapper = new ObjectMapper();
 		List<Address> addresses = null;
 		try {
-			addresses = Arrays.asList(mapper.readValue(new File("/home/bart/files/addresses.json"), Address[].class));
+			addresses = Arrays.asList(mapper.readValue(new File("./addresses.json"), Address[].class));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
