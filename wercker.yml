@@ -23,7 +23,7 @@ build:
       settings: pom.xml
       profiles: prod
     - internal/docker-push:
-        username: DOCKERHUB_USERNAME
+        username: $DOCKERHUB_USERNAME
         password: $DOCKERHUB_PASSWORD
         repository: $DOCKERHUB_USERNAME/$DOCKERHUB_REPO
         registry: https://registry.hub.docker.com/v2
