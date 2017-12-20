@@ -22,6 +22,15 @@ build:
       goals: clean install
       settings: pom.xml
       profiles: prod
+    - internal/docker-push:
+      entrypoint: /
+      cmd: 0.0.0.0 7891
+      working-dir: $WERCKER_ROOT
+      tag: $WERCKER_GIT_COMMIT
+      ports: "7891"
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_PASSWORD
+      repository: $DOCKERHUB_REPO  
 server:
   applicationConnectors:
     - type: http
