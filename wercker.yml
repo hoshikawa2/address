@@ -22,15 +22,14 @@ build:
       goals: clean install
       settings: pom.xml
       profiles: prod
+deploy:
+  box: maven:3.5.2-jdk-8
+  steps:
     - internal/docker-push:
-      entrypoint: /
-      cmd: 0.0.0.0 8080
-      working-dir: $WERCKER_ROOT
-      tag: $WERCKER_GIT_COMMIT
-      ports: "8080"
-      username: $DOCKERHUB_USERNAME
-      password: $DOCKERHUB_PASSWORD
-      repository: $DOCKERHUB_REPO  
+        username: DOCKERHUB_USERNAME
+        password: $DOCKERHUB_PASSWORD
+        repository: $DOCKERHUB_USERNAME/$DOCKERHUB_REPO
+        registry: https://registry.hub.docker.com/v2
 server:
   applicationConnectors:
     - type: http
