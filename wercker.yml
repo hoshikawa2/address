@@ -16,12 +16,12 @@ box: debian
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
 build:
-  # The steps that will be executed on build
+  box: maven:3.5.2-jdk-8
   steps:
-    # A step that executes `gradle build` command
-    - script:
-        name: run gradle
-        code: mvn package
+    - java/maven:
+      goals: clean install
+      settings: pom.xml
+      profiles: prod
 server:
   applicationConnectors:
     - type: http
