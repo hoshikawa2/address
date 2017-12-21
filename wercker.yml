@@ -26,7 +26,8 @@ build:
         password: $DOCKERHUB_PASSWORD
         repository: $DOCKERHUB_USERNAME/$DOCKERHUB_REPO
         registry: https://registry.hub.docker.com/v2
-		code: cp $WERCKER_SOURCE_DIR/target/address-0.0.1-SNAPSHOT.jar /code/address-0.0.1-SNAPSHOT.jar
+        code: mkdir /code
+        code: cp $WERCKER_SOURCE_DIR/target/address-0.0.1-SNAPSHOT.jar /code/address-0.0.1-SNAPSHOT.jar
         code: java -jar /code/address-0.0.1-SNAPSHOT.jar server address.yml
   applicationConnectors:
     - type: http
