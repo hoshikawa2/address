@@ -26,8 +26,6 @@ build:
         password: $DOCKERHUB_PASSWORD
         repository: $DOCKERHUB_USERNAME/$DOCKERHUB_REPO
         registry: https://registry.hub.docker.com/v2
-  script:
-  
   applicationConnectors:
     - type: http
       port: 7891
