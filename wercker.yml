@@ -24,7 +24,7 @@ build:
     - internal/docker-push:
         username: $DOCKERHUB_USERNAME
         password: $DOCKERHUB_PASSWORD
-        repository: $DOCKERHUB_USERNAME/$DOCKERHUB_REPO
+        repository: $DOCKERHUB_USERNAME/address
         registry: https://registry.hub.docker.com/v2
         cmd: /bin/bash -c "java -jar /pipeline/source/target/address-0.0.1-SNAPSHOT.jar server /pipeline/source/address.yml" 
   applicationConnectors:
