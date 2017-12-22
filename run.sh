@@ -1,4 +1,6 @@
-docker run -it address
-cd /pipeline/code
+docker pull hoshikawa2/address:latest
+docker run -it hoshikawa2/address:latest
 
-java -jar ./code/address-0.0.1-SNAPSHOT.jar server ./address.yml
+#cd /pipeline/code
+
+#java -jar ./code/address-0.0.1-SNAPSHOT.jar server ./address.yml
