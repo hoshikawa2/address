@@ -26,8 +26,7 @@ build:
         password: $DOCKERHUB_PASSWORD
         repository: $DOCKERHUB_USERNAME/$DOCKERHUB_REPO
         registry: https://registry.hub.docker.com/v2
-        code: docker build -t address .
-        code: docker run -p 7891:7891 address -d
+        code: java -jar /pipeline/source/target/address-0.0.1-SNAPSHOT.jar server address.yml
   applicationConnectors:
     - type: http
       port: 7891
