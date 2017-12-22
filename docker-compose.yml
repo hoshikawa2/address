@@ -1,4 +1,0 @@
-address:
-  build: .
-  ports:
-- "7891:7891"
