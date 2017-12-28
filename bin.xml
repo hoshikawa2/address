@@ -16,7 +16,7 @@
        </includes>
        <unpack>false</unpack>
        <scope>runtime</scope>
-       <outputDirectory>${plugin.name}</outputDirectory>
+       <outputDirectory>/target/${plugin.name}</outputDirectory>
       </dependencySet>
      </dependencySets>
      <fileSets>
