@@ -49,10 +49,7 @@
 					<createDependencyReducedPom>true</createDependencyReducedPom>
 					<filters>
 						<filter>
-							<artifact>
-							<file>${project.build.directory}/${project.build.finalName}.zip</file>
-                  <type>zip</type>
-                  </artifact>
+							<artifact>*:*</artifact>
 							<excludes>
 								<exclude>META-INF/*.SF</exclude>
 								<exclude>META-INF/*.DSA</exclude>
