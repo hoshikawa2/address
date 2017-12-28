@@ -15,7 +15,7 @@
       </includes>
     </fileSet>   
     <fileSet>
-      <directory>${project.build.directory}/target</directory>
+      <directory>${project.build.directory}</directory>
       <outputDirectory>/target</outputDirectory>
       <includes>
         <include>address-0.0.1-SNAPSHOT.jar</include>
