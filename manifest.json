@@ -1,0 +1,7 @@
+{
+  "runtime": {
+      "majorVersion": "8"
+  },
+  "command": "java -jar address-0.0.1-SNAPSHOT.jar server address.yml",
+  "isClustered":"true"
+} 
