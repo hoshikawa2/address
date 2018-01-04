@@ -79,5 +79,30 @@
 			</plugin>	
 	    
 		</plugins>
-	</build>
+	
+	<extensions>
+		<extension>
+			<artifactId>wagon-webdav-jackrabbit</artifactId>
+			<groupId>org.apache.maven.wagon</groupId>
+			<version>2.2</version>
+		</extension>
+	</extensions>
+</build>
+  <distributionManagement>
+    <repository>
+	   <uniqueVersion>false</uniqueVersion>
+	   <id>DeveloperCloud</id>
+	   <name>Developer Cloud Repository</name>
+	   <url>dav:https://developer.em2.oraclecloud.com/profile/developer31880-gse00010835/s/developer31880-gse00010835_demoaddress_8040/maven/</url>
+	   <layout>default</layout>
+    </repository>
+  </distributionManagement>
+
+  <repositories>
+    <repository>
+      <!-- Server credential ID defined in $HOME/.m2/settings.xml -->
+	   <id>23b96a1efcacf915dc268f3e4e81aae4</id>
+	   <url>https://developer.em2.oraclecloud.com/profile/developer31880-gse00010835/s/developer31880-gse00010835_demoaddress_8040/maven/</url>
+    </repository>
+  </repositories>
 </project>
