@@ -30,9 +30,9 @@ public class AddressRepository {
 		List<Address> addresses = null;
 		try {
 			//For Docker Hub
-			//addresses = Arrays.asList(mapper.readValue(new File("/pipeline/source/code/addresses.json"), Address[].class));
+			addresses = Arrays.asList(mapper.readValue(new File("/pipeline/source/code/addresses.json"), Address[].class));
 			//For Application Container Cloud Service
-			addresses = Arrays.asList(mapper.readValue(new File("/code/addresses.json"), Address[].class));
+			//addresses = Arrays.asList(mapper.readValue(new File("/code/addresses.json"), Address[].class));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
